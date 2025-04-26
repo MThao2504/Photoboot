@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoBoot - Chụp ảnh đơn lẻ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.1/build/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PhotoBoot</h1>
+            <p>Chụp ảnh đơn lẻ</p>
+            <a href="index.html" class="back-btn">← Quay lại trang chủ</a>
+        </header>
+
+        <div class="camera-container">
+            <video id="camera" autoplay playsinline></video>
+            <div id="frame-overlay"></div>
+            <div id="countdown-timer">3</div>
+        </div>
+
+        <div class="captured-image-container">
+            <img id="captured-image" alt="Ảnh đã chụp">
+            <div class="qr-container">
+                <div id="qrcode"></div>
+                <p class="qr-instruction">Quét mã QR để tải ảnh</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="capture-btn">Chụp ảnh</button>
+            <button id="retake-btn" disabled>Chụp lại</button>
+            <button id="download-btn" disabled>Tải xuống</button>
+        </div>
+
+
+        <div class="frames">
+            <h3>Khung hình</h3>
+            <div class="frame-options">
+                <button class="frame-btn active" data-frame="none">Không</button>
+                <button class="frame-btn" data-frame="simple">Đơn giản</button>
+                <button class="frame-btn" data-frame="double">Kép</button>
+                <button class="frame-btn" data-frame="polaroid">Polaroid</button>
+                <button class="frame-btn" data-frame="vintage">Vintage</button>
+                <button class="frame-btn" data-frame="hearts">Trái tim</button>
+            </div>
+        </div>
+
+        <div class="aspect-ratios">
+            <h3>Tỷ lệ khung hình</h3>
+            <div class="aspect-ratio-options">
+                <button class="aspect-btn active" data-aspect="original">Gốc (4:3)</button>
+                <button class="aspect-btn" data-aspect="square">Vuông (1:1)</button>
+                <button class="aspect-btn" data-aspect="portrait">Dọc (3:4)</button>
+                <button class="aspect-btn" data-aspect="landscape">Ngang (16:9)</button>
+                <button class="aspect-btn" data-aspect="instagram">Instagram (4:5)</button>
+                <button class="aspect-btn" data-aspect="classic">Cổ điển (3:2)</button>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="canvas" style="display: none;"></canvas>
+    <script src="js/single.js"></script>
+</body>
+</html> 

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoBoot - Ứng dụng chụp ảnh và áp dụng bộ lọc</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .option-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+        
+        .option-card {
+            width: 300px;
+            height: 350px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .option-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .option-img {
+            height: 200px;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        
+        .single-img {
+            background-image: url('images/single-photo.jpg');
+        }
+        
+        .strip-img {
+            background-image: url('images/photo-strip.jpg');
+        }
+        
+        .option-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .option-content h2 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .option-content p {
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PhotoBoot</h1>
+            <p>Chụp ảnh và áp dụng hiệu ứng</p>
+        </header>
+
+        <div class="option-container">
+            <a href="single.html" class="option-card">
+                <div class="option-img single-img"></div>
+                <div class="option-content">
+                    <h2>Chụp ảnh đơn lẻ</h2>
+                    <p>Chụp một ảnh đơn lẻ, áp dụng bộ lọc và khung hình độc đáo</p>
+                </div>
+            </a>
+            
+            <a href="strip.html" class="option-card">
+                <div class="option-img strip-img"></div>
+                <div class="option-content">
+                    <h2>Chụp dải ảnh</h2>
+                    <p>Chụp nhiều ảnh để tạo thành dải ảnh với nhiều bố cục khác nhau</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 
